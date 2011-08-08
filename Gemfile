@@ -35,3 +35,10 @@ group :test do
   # Pretty printed test output
   gem 'turn', :require => false
 end
+
+# This was added for Production
+# We dont have to maintain Postgres locally.
+group :production do
+  gem 'therubyracer-heroku', '0.8.1.pre3' # you will need this too
+  gem 'pg'
+end
